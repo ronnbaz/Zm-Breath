@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZenMaster Breath</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Thème Coucher de Soleil */
+        --bg-dark: #2e1065; /* Violet nuit profond */
+        --primary-accent: #fb923c; /* Orange terracotta/pêche */
+        --sunset-gradient: linear-gradient(180deg, #fb923c 0%, #be185d 60%, #2e1065 100%); /* Pêche -> Magenta -> Violet nuit */
+        --circle-color: #fff7ed; /* Orange très pâle / Blanc chaud */
+      }
+
+      body {
+        font-family: 'Quicksand', sans-serif;
+        background-color: #1e293b; /* slate-900 par défaut */
+        color: white;
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling during animations */
+      }
+      /* Smooth gradient background animation */
+      .zen-bg {
+        background: radial-gradient(circle at 50% 50%, #2c3e50 0%, #0f172a 100%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <!-- Audio d'ambiance (Ruisseau) - Loop activé -->
+    <audio id="ambiance-audio" src="https://cdn.jsdelivr.net/gh/Lirone-app/zen-sounds@latest/water_stream_loop.mp3" loop></audio>
+    <div id="root"></div>
+  </body>
+</html>
